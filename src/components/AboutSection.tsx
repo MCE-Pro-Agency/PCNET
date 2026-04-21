@@ -14,10 +14,10 @@ const strengths = [
 
 
 const countries = [
-  { name: "France", flag: "/France.webp" },
-  { name: "Maroc", flag: "/Morocco.svg" },
-  { name: "Allemagne", flag: "/allemagne.webp" },
-  { name: "Sénégal", flag: "/Senegal.svg" },
+  { name: "France", flag: FranceFlag },    // Utilisez la variable, pas le texte "/France.webp"
+  { name: "Maroc", flag: MoroccoFlag },
+  { name: "Allemagne", flag: AllemagneFlag },
+  { name: "Sénégal", flag: SenegalFlag },
 ];
 
 const AboutSection = () => (
