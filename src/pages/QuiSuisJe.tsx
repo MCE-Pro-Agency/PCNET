@@ -185,7 +185,7 @@ const QuiSuisJe = () => {
                 />
 
                 <img
-                  src="src/assets/said.png"
+                  src="assets/said.png"
                   alt="Said TALIB"
                   className="relative z-10 w-full rounded-2xl object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
                   style={{ aspectRatio: "4/5", objectPosition: "center top" }}
