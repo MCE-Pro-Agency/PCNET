@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Award, Globe, Shield, Users } from "lucide-react";
-import FranceFlag from "/public/France.webp";
-import MoroccoFlag from "/public/Morocco.svg";
-import AllemagneFlag from "/public/allemagne.webp";
-import SenegalFlag from "/public/Senegal.svg";
+import FranceFlag from "../assets/France.webp";
+import MoroccoFlag from "../assets/Morocco.svg";
+import AllemagneFlag from "../assets/allemagne.webp";
+import SenegalFlag from "../assets/Senegal.svg";
 const strengths = [
   { icon: Award, label: "+20 ans", desc: "d'expérience" },
   { icon: Shield, label: "Société", desc: "française" },
@@ -14,10 +14,10 @@ const strengths = [
 
 
 const countries = [
-  { name: "France", flag: FranceFlag },
-  { name: "Maroc", flag: MoroccoFlag },
-  { name: "Allemagne", flag: AllemagneFlag },
-  { name: "Sénégal", flag: SenegalFlag },
+  { name: "France", flag: "/France.webp" },
+  { name: "Maroc", flag: "/Morocco.svg" },
+  { name: "Allemagne", flag: "/allemagne.webp" },
+  { name: "Sénégal", flag: "/Senegal.svg" },
 ];
 
 const AboutSection = () => (
