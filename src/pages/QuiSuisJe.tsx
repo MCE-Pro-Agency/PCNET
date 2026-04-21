@@ -1,4 +1,5 @@
 import milestoneBg from "@/assets/milestones-bg.jpg";
+import saidImg from "@/assets/said.png";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion, useInView } from "framer-motion";
@@ -106,15 +107,15 @@ const QuiSuisJe = () => {
               {/* Badge mis en valeur — fond bleu vitré avec ombre */}
               <div className="inline-block mb-8">
                 <span
-                className="inline-block text-sm md:text-base font-bold tracking-[0.18em] uppercase px-6 py-3 rounded-2xl"
-                style={{
-                  color: "#FF9900",
-                  background: "linear-gradient(135deg, rgba(255,153,0,0.15) 0%, rgba(255,153,0,0.05) 100%)",
-                  boxShadow: "0 8px 32px rgba(255,153,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)",
-                  backdropFilter: "blur(8px)",
-                  border: "1px solid rgba(255,153,0,0.3)",
-                }}
-              >
+                  className="inline-block text-sm md:text-base font-bold tracking-[0.18em] uppercase px-6 py-3 rounded-2xl"
+                  style={{
+                    color: "#FF9900",
+                    background: "linear-gradient(135deg, rgba(255,153,0,0.15) 0%, rgba(255,153,0,0.05) 100%)",
+                    boxShadow: "0 8px 32px rgba(255,153,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(255,153,0,0.3)",
+                  }}
+                >
                   Fondateur &bull; Ingénieur &bull; Visionnaire
                 </span>
               </div>
@@ -186,13 +187,11 @@ const QuiSuisJe = () => {
                 />
 
                 <img
-                  src="assets/said.png"
+                  src={saidImg}
                   alt="Said TALIB"
                   className="relative z-10 w-full rounded-2xl object-cover shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
                   style={{ aspectRatio: "4/5", objectPosition: "center top" }}
                 />
-
-
               </div>
             </motion.div>
 
