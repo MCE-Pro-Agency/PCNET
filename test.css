@@ -1,0 +1,1457 @@
+/* =============================================
+   1. STRUCTURE GLOBALE (LA "CARTE")
+   ============================================= */
+
+@media (min-width: 992px) {
+  
+  /* Largeur de la carte */
+  #bookingWrap .cpbs-main:has(.cpbs-main-navigation-default li[data-step="1"].cpbs-state-selected) .cpbs-main-navigation-default,
+  #bookingWrap .cpbs-main:has(.cpbs-main-navigation-default li[data-step="1"].cpbs-state-selected) .cpbs-main-content-step-1 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Card : haut (stepper) */
+  #bookingWrap .cpbs-main:has(.cpbs-main-navigation-default li[data-step="1"].cpbs-state-selected) .cpbs-main-navigation-default {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-bottom: 0;
+    border-radius: 16px 16px 0 0;
+    padding: 24px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+  }
+
+  /* Card : bas (contenu step 1) */
+  #bookingWrap .cpbs-main:has(.cpbs-main-navigation-default li[data-step="1"].cpbs-state-selected) .cpbs-main-content-step-1 {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-top: 0;
+    border-radius: 0 0 16px 16px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+  }
+}
+
+/* =============================================
+   2. STYLE DU STEPPER (1, 2, 3, 4)
+   ============================================= */
+
+#bookingWrap .cpbs-main-navigation-responsive {
+  display: none;
+}
+
+#bookingWrap .cpbs-main-navigation-default ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#bookingWrap .cpbs-main-navigation-default li {
+  flex-basis: 25%;
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  padding: 0 15px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bookingWrap .cpbs-main-navigation-default li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+#bookingWrap .cpbs-main-navigation-default li a > span:first-child {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  background: #fff;
+  font-weight: 700;
+  transition: all .2s ease;
+  z-index: 2;
+  position: relative;
+}
+
+#bookingWrap .cpbs-main-navigation-default li .cpbs-meta-icon-tick {
+  display: none;
+}
+
+#bookingWrap .cpbs-main-navigation-default li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: 1;
+}
+
+#bookingWrap .cpbs-main-navigation-default li.cpbs-state-selected a {
+  color: green;
+}
+
+#bookingWrap .cpbs-main-navigation-default li.cpbs-state-selected a > span:first-child {
+  background: red;
+  color: #fff;
+  border-color: #111827;
+}
+
+/* =============================================
+   3. GRILLE CONTENU ÉTAPE 1 (3 Colonnes)
+   ============================================= */
+
+#bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+#bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type > div {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+#bookingWrap .cpbs-header-style-4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  padding: 0 0 16px 0;
+  margin: 0 0 16px 0;
+  border: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#bookingWrap .cpbs-main-content-step-1 .cpbs-header-style-4 + div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+#bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type > div:last-child .cpbs-header-style-4 + div {
+  grid-template-columns: 1fr;
+}
+
+/* =============================================
+   4. CHAMPS & BOUTON
+   ============================================= */
+
+#bookingWrap .cpbs-form-field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+#bookingWrap .cpbs-form-field input[type="text"] {
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 16px;
+  color: #111827;
+}
+
+#bookingWrap .cpbs-form-field input[type="text"]:focus {
+  border-color: #EF1728;
+  box-shadow: 0 0 0 1px #EF1728;
+  outline: none;
+}
+
+#bookingWrap .ui-selectmenu-button.ui-button {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+#bookingWrap .ui-selectmenu-text {
+  font-size: 12px;
+  color: #111827;
+  padding: 0;
+}
+
+#bookingWrap .ui-selectmenu-button .ui-icon {
+  background: none;
+  text-indent: 0;
+  margin-top: -9px;
+}
+
+#bookingWrap .ui-selectmenu-button .ui-icon::before {
+  content: '▼';
+  font-size: 10px;
+  color: #6b7280;
+}
+
+#bookingWrap .cpbs-button[type="submit"] {
+  display: block;
+  width: 100%;
+  height: 52px;
+  background-color: #EF1728;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+#bookingWrap .cpbs-button[type="submit"]:hover {
+  background-color: #d0101f;
+}
+
+/* =============================================
+   5. RESPONSIVE MOBILE
+   ============================================= */
+
+@media (max-width: 991px) {
+  #bookingWrap .cpbs-main-navigation-default,
+  #bookingWrap .cpbs-main-content-step-1 {
+    padding: 20px;
+  }
+  
+  #bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  #bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type > div {
+    padding: 20px;
+  }
+
+  #bookingWrap .cpbs-main-content-step-1 .cpbs-header-style-4 + div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #bookingWrap .cpbs-main-navigation-default {
+    display: none;
+  }
+
+  #bookingWrap .cpbs-main-navigation-responsive {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* =============================================
+   10. BOUTONS DE NAVIGATION (Précédent/Suivant)
+   ============================================= */
+   
+#bookingWrap .cpbs-main-content-navigation-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1 {
+  background-color: #EF1728;
+  color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 24px;
+  text-decoration: none;
+  height: 48px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal !important;
+}
+
+#bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1:hover {
+  background-color: #d0101f;
+}
+
+#bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-2 {
+  height: 48px;
+  line-height: 46px;
+  background-color: #fff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 24px;
+  text-decoration: none;
+}
+
+/* =============================================
+   STEP 3 – LAYOUT GLOBAL
+   ============================================= */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-summary-box {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  padding: 18px 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  font-size: 14px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-summary-box .cpbs-header.cpbs-header-style-4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-rental-date-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-rental-date-box > div span:first-child {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-rental-date-box > div span:last-child {
+  font-weight: 500;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-summary-price-element-total {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-summary-price-element-total .cpbs-header-style-3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* STEP 3 – PANNEAUX FORMULAIRES */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form .cpbs-form-panel {
+  margin-bottom: 20px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form .cpbs-form-panel > .cpbs-header.cpbs-header-style-3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form .cpbs-form-panel-content .cpbs-clear-fix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field.cpbs-form-field-width-50 {
+  flex: 0 0 calc(50% - 9px);
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field.cpbs-form-field-width-33 {
+  flex: 0 0 calc(33.333% - 12px);
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field:not(.cpbs-form-field-width-50):not(.cpbs-form-field-width-33) {
+  flex: 0 0 100%;
+}
+
+@media (max-width: 768px) {
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-form-field.cpbs-form-field-width-50,
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-form-field.cpbs-form-field-width-33 {
+    flex: 0 0 100%;
+  }
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field > label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 4px;
+  display: block;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="text"],
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="password"],
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="email"],
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="tel"],
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field select,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #111827;
+  background: #ffffff;
+  transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="text"]:focus,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="password"]:focus,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="email"]:focus,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field input[type="tel"]:focus,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field select:focus,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field textarea:focus {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.25);
+}
+
+#bookingWrap .cpbs-main-content-step-3 .fly-comment-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+/* STEP 3 – BOUTONS SIGN-IN / SIGN-UP */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-button.cpbs-button-style-1,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-button.cpbs-button-style-2 {
+  border-radius: 999px;
+  padding: 9px 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-button.cpbs-button-style-1 {
+  background: #ff0f23;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 10px 26px rgba(255, 15, 35, 0.45);
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-button.cpbs-button-style-2 {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  font-weight: 500;
+}
+
+/* STEP 3 – ADRESSE DE FACTURATION */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-checkbox.cpbs-state-selected {
+  background: #ff0f23;
+  border-color: #ff0f23;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-checkbox.cpbs-state-selected .cpbs-meta-icon-tick {
+  color: #ffffff;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cb-company-toggle {
+  margin: 8px 0 10px;
+  font-size: 13px;
+}
+
+/* STEP 3 – MASQUER ÉTAT & N° DE RUE */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field:has(input[name="cpbs_client_billing_detail_street_number"]),
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-field:has(input[name="cpbs_client_billing_detail_state"]) {
+  display: none !important;
+}
+
+#bookingWrap .cpbs-main-content-step-3 ul.cpbs-payment > li:not(:has([data-group="payment"][data-value="moneticopaiement_cb_6771"])) {
+  display: none !important;
+}
+
+/* STEP 3 – SECTION PAIEMENT */
+
+#bookingWrap .cpbs-main-content-step-3 #cpbs-payment > .cpbs-header.cpbs-header-style-3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 12px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 ul.cpbs-payment {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#bookingWrap .cpbs-main-content-step-3 ul.cpbs-payment > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+#bookingWrap .cpbs-main-content-step-3 ul.cpbs-payment > li .cpbs-form-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 ul.cpbs-payment > li .cpbs-header.cpbs-header-style-4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-panel[data-fly-company-init="1"] .cpbs-form-checkbox {
+  display: none !important;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-panel[data-fly-company-init="1"] > div {
+  display: block;
+}
+
+/* STEP 3 – Inverser récap / formulaire */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-header-style-3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #EF1728;
+  padding: 0 0 16px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-left,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-right {
+  float: none;
+  width: auto;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-right {
+  order: 1;
+  flex: 3 1 0;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-left {
+  order: 2;
+  flex: 1.2 1 0;
+}
+
+@media (max-width: 768px) {
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 {
+    flex-direction: column;
+  }
+
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-right,
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-left {
+    order: initial;
+    flex: 0 0 auto;
+  }
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-panel .cpbs-form-checkbox {
+  display: none !important;
+}
+
+#bookingWrap .cpbs-main-navigation-default {
+  margin-bottom: 32px;
+}
+
+#bookingWrap .cpbs-main-content {
+  margin-top: 8px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form .cpbs-form-panel,
+#bookingWrap .cpbs-main-content-step-3 #cpbs-payment,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-summary-box {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+  padding: 22px 24px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form .cpbs-form-panel {
+  margin-bottom: 24px;
+}
+
+/* =============================================
+   STEPPEUR : même rendu mobile / desktop
+   ============================================= */
+
+#bookingWrap .cpbs-main-navigation-responsive {
+  display: none !important;
+}
+
+#bookingWrap .cpbs-main-navigation-default {
+  display: block !important;
+}
+
+@media (max-width: 500px) {
+  #bookingWrap .cpbs-main-navigation-default {
+    padding: 16px 12px;
+  }
+
+  #bookingWrap .cpbs-main-navigation-default li {
+    padding: 0 6px;
+  }
+
+  #bookingWrap .cpbs-main-navigation-default li a {
+    font-size: 12px;
+  }
+
+  #bookingWrap .cpbs-main-navigation-default li a > span:first-child {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
+
+/* =============================================
+   CENTRAGE STRICT DES CARTES – MOBILE
+   ============================================= */
+
+@media (max-width: 600px) {
+  #bookingWrap,
+  #bookingWrap .cpbs-main,
+  #bookingWrap .cpbs-main-content-step-1 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 110%;
+    box-sizing: border-box;
+  }
+
+  #bookingWrap .cpbs-main-navigation-default {
+    width: calc(100% - 3px);
+    margin: 0 auto 16px auto;
+  }
+
+  #bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type {
+    width: 100%;
+    margin: 0;
+  }
+
+  #bookingWrap .cpbs-main-content-step-1 .cpbs-form-panel > div > div > div:first-of-type > div {
+    width: calc(90% - 3px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  #bookingWrap .cpbs-button[type="submit"] {
+    width: calc(90% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* =============================================
+   FOOTER & CALENDRIER Z-INDEX
+   ============================================= */
+
+.light-footer {
+  position: relative;
+  z-index: 1;
+}
+
+#bookingWrap .ui-selectmenu-menu {
+  z-index: 9999 !important;
+}
+
+#ui-datepicker-div,
+.cpbs-datepicker,
+.cpbs-datepicker-wrapper {
+  z-index: 99999 !important;
+}
+
+/* =============================================
+   BOUTONS NAVIGATION RESPONSIVE
+   ============================================= */
+
+@media (max-width: 600px) {
+  #bookingWrap .cpbs-main-content-navigation-button {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 16px;
+  }
+
+  #bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1,
+  #bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-2 {
+    width: 80%;
+    max-width: 300px;
+    height: 32px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    padding: 0 10px;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+#bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1,
+#bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-2 {
+  height: 42px;
+  padding: 0 18px;
+  font-size: 13px;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  #bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1,
+  #bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-2 {
+    height: 34px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  #bookingWrap .cpbs-button[type="submit"] {
+    max-width: 200px;
+    height: 40px;
+    font-size: 12px;
+    margin-top: 24px;
+  }
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-main-content-navigation-button .cpbs-button-style-1,
+#bookingWrap .cpbs-main-content-step-3 .cpbs-main-content-navigation-button .cpbs-button-style-2 {
+  height: 40px;
+  padding: 0 18px;
+  font-size: 13px;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+}
+
+@media (max-width: 600px) {
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-main-content-navigation-button {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 16px;
+  }
+
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-main-content-navigation-button .cpbs-button-style-1,
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-main-content-navigation-button .cpbs-button-style-2 {
+    width: 80%;
+    max-width: 280px;
+    height: 32px;
+    font-size: 11px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bookingWrap .cpbs-main-content-step-3 .theiaStickySidebar {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-left,
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-layout-25x75 .cpbs-layout-column-right {
+    width: 100%;
+  }
+
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-summary-box {
+    width: 100%;
+    margin: 0 0 24px 0;
+  }
+}
+
+#bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1 {
+  font-size: 11px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 600px) {
+  #bookingWrap .cpbs-main-content-navigation-button .cpbs-button-style-1 {
+    font-size: 9px;
+    line-height: 1.15;
+  }
+}
+
+#bookingWrap .cpbs-main-content-navigation-button a.cpbs-button.cpbs-button-style-1.cpbs-button-step-next {
+  font-size: 10px !important;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+/* =============================================
+   SELECT PAYS
+   ============================================= */
+
+#bookingWrap .cpbs-main-content-step-3 .ui-selectmenu-button.ui-button {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #111827;
+  text-align: left;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .ui-selectmenu-button.ui-button .ui-icon {
+  background: none;
+  text-indent: 0;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .ui-selectmenu-button.ui-button .ui-icon::before {
+  content: "▼";
+  font-size: 10px;
+  color: #6b7280;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .ui-selectmenu-menu .ui-menu {
+  max-height: 260px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .ui-selectmenu-menu .ui-menu-item-wrapper.ui-state-active {
+  background: #EF1728;
+  color: #ffffff;
+}
+
+#bookingWrap .ui-selectmenu-menu .ui-menu {
+  max-height: 220px;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+#ui-id-11-menu {
+  max-height: 220px;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+#bookingWrap select[name="cpbs_client_billing_detail_country_code"],
+#bookingWrap select[name="cpbs_client_billing_detail_country_code"] option {
+  background-color: #ffffff !important;
+  color: #111827;
+}
+
+#bookingWrap .ui-selectmenu-menu .ui-menu {
+  background-color: #ffffff !important;
+}
+
+#bookingWrap .ui-selectmenu-menu .ui-menu .ui-menu-item-wrapper {
+  background-color: #ffffff !important;
+  color: #111827;
+}
+
+#bookingWrap .cpbs-location-info-frame {
+  display: none !important;
+}
+
+#bookingWrap + .cpbs-location-info-frame {
+  display: none !important;
+}
+
+/* =============================================
+   STEP 3 – Masquer login + création compte
+   ============================================= */
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form-sign-in {
+  display: none !important;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form-sign-up {
+  display: block !important;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-client-form-sign-up .cpbs-form-panel:has(input[name="cpbs_client_sign_up_enable"]) {
+  display: none !important;
+}
+
+#bookingWrap .cpbs-main-content-step-3 .cpbs-form-panel[data-fly-company-toggle-init="1"] .cpbs-form-field.cpbs-form-field-width-33 {
+  flex: 0 0 calc(25% - 12px);
+}
+
+@media (max-width: 768px) {
+  #bookingWrap .cpbs-main-content-step-3 .cpbs-form-panel[data-fly-company-toggle-init="1"] .cpbs-form-field.cpbs-form-field-width-33 {
+    flex: 0 0 100%;
+  }
+}
+
+/* =============================================
+   BOUTON RESERVER STEP 1
+   ============================================= */
+
+#bookingWrap .cpbs-main-content-step-1 input.cpbs-button[type="submit"] {
+  background-color: #e5e7eb !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+#bookingWrap .cpbs-main-content-step-1 input.cpbs-button[type="submit"]:hover {
+  background-color: #d1d5db !important;
+  color: #111827 !important;
+}
+
+/* =============================================
+   RÉCAP FOND BLANC
+   ============================================= */
+
+#bookingWrap .cpbs-summary-box {
+  background: white !important;
+  color: #000000 !important;
+}
+
+#bookingWrap .cpbs-summary-box .cpbs-header {
+  color: #000000 !important;
+}
+
+#bookingWrap .cpbs-summary-box .cpbs-rental-date-box span,
+#bookingWrap .cpbs-summary-box .cpbs-summary-price-element,
+#bookingWrap .cpbs-summary-box .cpbs-summary-price-element-total div {
+  color: #000000 !important;
+}
+
+#bookingWrap .cpbs-summary-box a {
+  color: #000000 !important;
+}
+
+#bookingWrap .cpbs-summary-box .cpbs-rental-date-box span {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+#bookingWrap .cpbs-summary-box .cpbs-rental-date-box > div {
+  background: transparent !important;
+}
+
+/* =============================================
+   BOUTONS LIEU FR / CH
+   ============================================= */
+
+.flyv-lieux-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.flyv-lieux-btn {
+  flex: 1 1 180px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+}
+
+.flyv-lieux-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.flyv-lieux-btn.is-active {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+/* Masquer l'ancien select parking */
+.cpbs-main-content-step-1 .cpbs-form-panel > div > div > div > div:nth-child(3) .cpbs-form-field > label,
+.cpbs-main-content-step-1 .cpbs-form-panel > div > div > div > div:nth-child(3) .cpbs-form-field > .select2,
+.cpbs-main-content-step-1 .cpbs-form-panel > div > div > div > div:nth-child(3) .cpbs-form-field > .ui-selectmenu-button,
+.cpbs-main-content-step-1 .cpbs-form-panel > div > div > div > div:nth-child(3) .cpbs-form-field > .dropdown-wrapper {
+  display: none !important;
+}
+
+/* Masque le header flottant CPBS */
+.cpbs-summary,
+.cpbs-summary * {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Masquer le menu lieu de rendez-vous */
+.ui-selectmenu-menu[aria-labelledby="ui-id-2-button"],
+#ui-id-2-menu {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* =============================================
+   CONTENEUR NAVIGATION
+   ============================================= */
+
+.cpbs-main-content-navigation-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cpbs-main-content-navigation-button .cpbs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  width: auto !important;
+}
+
+.cpbs-main-content-navigation-button .cpbs-button-step-prev {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+/* =============================================
+   NUMÉRO DE VOL
+   ============================================= */
+
+.cpbs-flight-number {
+  margin-top: 10px;
+}
+
+.cpbs-flight-number label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cpbs-flight-number input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* =============================================
+   RÉCAP STEP 3
+   ============================================= */
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box {
+  background: #f7f7fb;
+  border: 1px solid #e0e2ec;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #111827;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box > * + * {
+  margin-top: 12px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-header.cpbs-header-style-4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: #6b7280;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-header.cpbs-header-style-4:first-of-type {
+  margin-top: 0;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box > div:first-of-type + div {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-rental-date-box {
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px dashed #d1d5db;
+  padding: 10px 12px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-rental-date-box > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-rental-date-box > div span:first-child {
+  color: #6b7280;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-rental-date-box > div span:last-child {
+  font-weight: 600;
+  color: #111827;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-header.cpbs-header-style-4 + div {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+  padding: 6px 0 4px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element {
+  margin-top: 8px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element > div > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element > div > div span:first-child {
+  color: #6b7280;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element > div > div span:last-child {
+  font-weight: 500;
+  color: #111827;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element-total {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 8px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element-total .cpbs-header-style-4 {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box .cpbs-summary-price-element-total .cpbs-header-style-3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .cpbs-main-content-step-3 .cpbs-layout-column-left .cpbs-summary-box {
+    margin-bottom: 20px;
+    padding: 16px 14px;
+  }
+}
+
+/* =============================================
+   INFO ICON TOOLTIP
+   ============================================= */
+
+.cpbs-label-has-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.cpbs-info-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cpbs-label-has-info .cpbs-info-icon {
+  margin-left: 3px;
+}
+
+.cpbs-info-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 8px);
+  min-width: 220px;
+  max-width: 240px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+  transition: opacity .15s ease;
+}
+
+.cpbs-info-icon:hover .cpbs-info-tooltip,
+.cpbs-info-icon:focus .cpbs-info-tooltip,
+.cpbs-info-icon:focus-within .cpbs-info-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =============================================
+   STEPPER - Renommer étape 3
+   ============================================= */
+
+#bookingWrap .cpbs-main-navigation-default li[data-step="3"] a span:last-child {
+  position: relative;
+  font-size: 0 !important;
+}
+
+#bookingWrap .cpbs-main-navigation-default li[data-step="3"] a span:last-child::after {
+  content: "information";
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* =============================================
+   LABELS - CASSE
+   ============================================= */
+
+#bookingWrap .cpbs-form-field label {
+  text-transform: uppercase;
+}
+
+#bookingWrap .cpbs-form-field-label {
+  text-transform: none !important;
+}
+
+#bookingWrap .cpbs-main-content-step-1 .cpbs-form-field-label {
+  text-transform: none !important;
+}
+
+#bookingWrap .flyv-lieux-btn {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: none !important;
+}
+
+#bookingWrap .flyv-lieux-btn img.emoji {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+/* =============================================
+   MOBILE STEP 3
+   ============================================= */
+
+@media (max-width: 768px) {
+  .cpbs-main-content-step-3 .cpbs-layout-25x75 {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .cpbs-main-content-step-3 .cpbs-layout-column-left,
+  .cpbs-main-content-step-3 .cpbs-layout-column-right,
+  .cpbs-main-content-step-3 #cpbs-payment {
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .cpbs-main-content-step-3 .cpbs-layout-column-right {
+    order: 1;
+  }
+
+  .cpbs-main-content-step-3 .cpbs-layout-column-left {
+    order: 2;
+  }
+
+  .cpbs-main-content-step-3 #cpbs-payment {
+    order: 3;
+  }
+}
+
+/* Bouton accordéon récap mobile */
+@media (max-width: 768px) {
+  .cpbs-summary-toggle-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 20px 0 10px;
+    border-radius: 999px;
+    border: 1px solid #eee;
+    background: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .cpbs-summary-toggle-mobile::after {
+    content: "+";
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .cpbs-summary-toggle-mobile:not(.is-collapsed)::after {
+    content: "−";
+  }
+}
+
+@media (min-width: 769px) {
+  .cpbs-summary-toggle-mobile {
+    display: none;
+  }
+}
+
+/* =============================================
+   ENTREPRISE TOGGLE
+   ============================================= */
+
+.cpbs-form-panel .is-hidden {
+  display: none;
+}
+
+.cpbs-business-toggle-field label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.cpbs-main-navigation-default li[data-step="3"] a > span:last-child::after {
+  content: "MesInforma\Ations";
+  font-size: 13px !important;
+  font-weight: 700;
+  visibility: visible;
+  color: #222;
+  display: block;
+  white-space: pre;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.my-company-row {
+  display: none !important;
+}
+
+.my-company-row.is-visible {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: fadeEffect 0.5s;
+}
+
+.my-company-row.is-visible .cpbs-form-field {
+  flex: 1;
+  min-width: 250px;
+  width: auto !important;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+/* =============================================
+   STEP 4 – NOUVEAU DESIGN (à créer)
+   ============================================= */
+
+/* Les nouveaux styles seront ajoutés ici */
