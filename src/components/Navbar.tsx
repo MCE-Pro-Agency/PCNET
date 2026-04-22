@@ -28,7 +28,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="PCNET UNIVERS"
-            className="h-16 md:h-12 object-contain scale-125 origin-left"
+            className="h-10 md:h-8 object-contain scale-125 origin-left"
           />
         </Link>
 
