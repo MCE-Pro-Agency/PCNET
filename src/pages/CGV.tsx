@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, FileText, Shield, Truck, CreditCard, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import sectionBg from "@/assets/section-bg-CjdKqotJ.jpg";
+import sectionBg from "@/assets/section-bg.jpg";
 
 const CGV = () => {
   const sections = [
