@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Battery, Cpu, HardDrive, Laptop, Monitor, Mouse, PlugZap } from "lucide-react";
 
+// Importez les images en haut du fichier
+import hpLogo from "@/assets/HP-Logo.png";
+import dellLogo from "@/assets/Dell.jpg";
+import lenovoLogo from "@/assets/lenovo.png";
+
 const products = [
   { icon: Monitor, name: "Écrans", desc: "Moniteurs professionnels toutes tailles" },
   { icon: Laptop, name: "PC Portables", desc: "Laptops HP, Dell, Lenovo" },
@@ -12,9 +17,9 @@ const products = [
 ];
 
 const brands = [
-  { name: "HP", logo: "src/assets/HP-Logo.png" },
-  { name: "Dell", logo: "src/assets/Dell.jpg" },
-  { name: "Lenovo", logo: "src/assets/lenovo.png" },
+  { name: "HP", logo: hpLogo },
+  { name: "Dell", logo: dellLogo },
+  { name: "Lenovo", logo: lenovoLogo },
 ];
 
 const ProductsSection = () => (
@@ -32,7 +37,6 @@ const ProductsSection = () => (
           Une gamme complète de matériel informatique pour les professionnels. Vente en gros à partir de 100 pièces.
         </p>
       </motion.div>
-
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
         {products.map((p, i) => (
           <motion.div
@@ -51,7 +55,6 @@ const ProductsSection = () => (
           </motion.div>
         ))}
       </div>
-
       {/* Brand logos */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -64,7 +67,7 @@ const ProductsSection = () => (
             key={b.name}
             src={b.logo}
             alt={b.name}
-            className="h-12 md:h-16 object-contain"
+            className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
           />
         ))}
       </motion.div>
