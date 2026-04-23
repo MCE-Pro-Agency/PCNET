@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png";
-
+import { Link } from "react-router-dom";
 const Footer = () => (
   <footer className="gradient-primary text-primary-foreground">
     <div className="max-w-7xl mx-auto px-6 py-16">
@@ -29,9 +29,11 @@ const Footer = () => (
                 href={`#${l === "À propos" ? "apropos" : l.toLowerCase()}`}
                 className="block text-sm opacity-70 hover:opacity-100 transition-opacity"
               >
+                
                 {l}
               </a>
-            ))}
+            ))
+            }
           </div>
         </div>
 
@@ -46,6 +48,12 @@ const Footer = () => (
     <p>77600 Bussy-Saint-Georges</p>
     <p>+33 6 25 15 94 52</p>
     <p>pcnetunivers@gmail.com</p>
+    <Link 
+                    to="/cgv" 
+                    className="block mt-4 pt-4 border-t border-white/20 hover:opacity-100 transition-opacity"
+                  >
+                    Conditions Générales de Vente
+                  </Link>
   </div>
 
 </div>
