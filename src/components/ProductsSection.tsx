@@ -37,26 +37,26 @@ const ProductsSection = () => (
           Une gamme complète de matériel informatique pour les professionnels. Vente en gros à partir de 100 pièces.
         </p>
       </motion.div>
+      
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
         {products.map((p, i) => (
-         {/* Brand logos */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="flex items-center justify-center gap-12 md:gap-20"
-            >
-              {brands.map((b) => (
-                <img
-                  key={b.name}
-                  src={b.logo}
-                  alt={b.name}
-                  className="h-12 md:h-16 object-contain brightness-0 saturate-100 invert-[0.4] sepia-[1] saturate-[5] hue-rotate-[190deg] hover:scale-110 transition-all duration-300"
-                />
-              ))}
-            </motion.div>
+          <motion.div
+            key={p.name}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.08 }}
+            className="bg-card rounded-2xl p-6 border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300 group cursor-pointer"
+          >
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <p.icon size={28} className="text-primary" />
+            </div>
+            <h3 className="font-semibold text-foreground font-heading">{p.name}</h3>
+            <p className="text-sm text-muted-foreground mt-1">{p.desc}</p>
+          </motion.div>
         ))}
       </div>
+      
       {/* Brand logos */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -69,7 +69,7 @@ const ProductsSection = () => (
             key={b.name}
             src={b.logo}
             alt={b.name}
-            className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+            className="h-12 md:h-16 object-contain hover:scale-110 transition-all duration-300"
           />
         ))}
       </motion.div>
