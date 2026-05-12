@@ -55,7 +55,7 @@ const Footer = () => (
                     Conditions Générales de Vente
                   </Link>
     <Link 
-  to="/politique-confidentialite" 
+  to="/Politiqueconfidentialite" 
   className="block mt-2 hover:opacity-100 transition-opacity"
 >
   Politique de Confidentialité
