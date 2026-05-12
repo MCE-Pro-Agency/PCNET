@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CGV from "./pages/CGV";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import PolitiqueConfidentialite from "./pages/Politiqueconfidentialite";
 import QuiSuisJe from "./pages/QuiSuisJe";
 
 const queryClient = new QueryClient();
