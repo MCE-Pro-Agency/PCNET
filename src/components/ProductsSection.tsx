@@ -34,7 +34,7 @@ const ProductsSection = () => (
         <span className="text-sm font-semibold text-accent uppercase tracking-wider">Catalogue</span>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">Nos produits</h2>
         <p className="max-w-xl mx-auto text-muted-foreground">
-          Une gamme complète de matériel informatique pour les professionnels. Vente en gros à partir de 100 pièces.
+          Une gamme complète de matériel informatique pour les professionnels. Vente en gros.
         </p>
       </motion.div>
       
